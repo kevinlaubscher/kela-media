@@ -149,9 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 9. Newsletter Popup
-    const BREVO_API_KEY = 'DEIN-API-KEY-HIER';
-    const BREVO_LIST_ID = 3;
-
     const nlOverlay = document.getElementById('newsletterOverlay');
     const nlClose   = document.getElementById('nlClose');
     const nlForm    = document.getElementById('nlForm');
@@ -186,21 +183,13 @@ document.addEventListener("DOMContentLoaded", () => {
             nlSubmit.disabled = true;
 
             try {
-                const response = await fetch('https://api.brevo.com/v3/contacts', {
+                const response = await fetch('/.netlify/functions/newsletter', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'api-key': BREVO_API_KEY
-                    },
-                    body: JSON.stringify({
-                        email: email,
-                        attributes: { FIRSTNAME: name },
-                        listIds: [BREVO_LIST_ID],
-                        updateEnabled: true
-                    })
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, name })
                 });
 
-                if (response.ok || response.status === 204) {
+                if (response.ok) {
                     nlForm.style.display = 'none';
                     nlSuccess.style.display = 'block';
                     setTimeout(() => nlOverlay.classList.remove('show'), 3000);
