@@ -1760,3 +1760,121 @@ select {
     flex: 1;
   }
 }
+
+/* VA Section */
+.va-intro-box {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 32px 40px;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.va-intro-box p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.va-hourly-wrap {
+  max-width: 380px;
+  margin: 0 auto 48px;
+}
+
+.va-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto 40px;
+  max-width: 800px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.va-divider::before,
+.va-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+@media (max-width: 768px) {
+  .va-intro-box {
+    padding: 24px;
+  }
+}
+
+/* Partner Logos */
+.partner-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 48px;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.partner-logo {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.partner-logo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.partner-logo img {
+  max-height: 70px;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.partner-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .partner-grid {
+    gap: 20px;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+  }
+
+  .partner-logo {
+    padding: 16px 20px;
+  }
+
+  .partner-logo img {
+    max-height: 50px;
+    max-width: 120px;
+  }
+}
+
+/* Orange Umrandung für "Für wen ich arbeite" */
+.card-accent {
+  border: 2px solid var(--orange);
+}
