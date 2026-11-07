@@ -1878,3 +1878,34 @@ select {
 .card-accent {
   border: 2px solid var(--orange);
 }
+
+
+/* Branchen-Hinweis */
+.branchen-note {
+  text-align: center;
+  margin-top: 32px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* "Das bekommst du" in den Preiskarten */
+.price-output {
+  background: rgba(255, 74, 0, 0.06);
+  border: 1px solid rgba(255, 74, 0, 0.2);
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  display: grid;
+  gap: 2px;
+  font-size: 14px;
+}
+
+.price-output strong {
+  color: var(--orange);
+  font-size: 13px;
+}
+
+.price-output span {
+  color: var(--ink);
+  font-weight: 600;
+}

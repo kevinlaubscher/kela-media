@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 if (entry.target.classList.contains('hero-proof')) {
-                    animate(document.getElementById("kpi1"), 30);
+                    animate(document.getElementById("kpi1"), 100);
                     animate(document.getElementById("kpi2"), 3);
                     animate(document.getElementById("kpi3"), 5);
                 }
